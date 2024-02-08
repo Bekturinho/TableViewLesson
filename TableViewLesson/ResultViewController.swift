@@ -9,21 +9,20 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    private lazy var resultLAbel: UILabel = {
+        let label = UILabel()
+        label.text = resultPrName
+        return label
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        
+        view.addSubview(resultLAbel)
+        resultLAbel.translatesAutoresizingMaskIntoConstraints = false
+        resultLAbel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        resultLAbel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
